@@ -7,36 +7,36 @@ const Directory = () => {
 
     const [sections] = useState([
         {
-          title: 'hats',
-          imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+          title: 'table lamps',
+          imageUrl: 'https://www.ikea.com/gb/en/images/products/arstid-table-lamp-brass-white__0880725_pe617347_s5.jpg?f=s',
           id: 1,
-          linkUrl: 'shop/hats'
+          linkUrl: 'shop/tablelamp'
         },
         {
-          title: 'jackets',
-          imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+          title: 'floor lamps',
+          imageUrl: 'https://www.ikea.com/gb/en/images/products/lauters-floor-lamp-ash-white__0879908_pe714870_s5.jpg?f=m',
           id: 2,
-          linkUrl: 'shop/jackets'
+          linkUrl: 'shop/floorlamp'
         },
         {
-          title: 'sneakers',
-          imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+          title: 'ceiling lamps',
+          imageUrl: 'https://www.ikea.com/gb/en/images/products/agunnaryd-pendant-lamp-with-3-lamps-black__0859558_pe782372_s5.jpg?f=s',
           id: 3,
-          linkUrl: 'shop/sneakers'
+          linkUrl: 'shop/ceilinglamp'
         },
         {
-          title: 'womens',
-          imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+          title: 'Lamp shades',
+          imageUrl: 'https://www.ikea.com/gb/en/images/products/torared-pendant-lamp-shade-sedge-handmade__0764655_pe753260_s5.jpg?f=xxs',
           size: 'large',
           id: 4,
-          linkUrl: 'shop/womens'
+          linkUrl: 'shop/shadeslamp'
         },
         {
-          title: 'mens',
-          imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+          title: 'desk lamps',
+          imageUrl: 'https://www.ikea.com/gb/en/images/products/tertial-work-lamp-dark-grey__0879117_pe622662_s5.jpg?f=s',
           size: 'large',
           id: 5,
-          linkUrl: 'shop/mens'
+          linkUrl: 'shop/desklamp'
         }
       ]
       )
@@ -44,7 +44,7 @@ const Directory = () => {
     return (
         <>
             <DirectoryMenu>
-                {sections.map(({title, imageUrl, id, size}) => <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>)}
+                {sections.map(({title, imageUrl, id, size, linkUrl}) => <MenuItem to = {linkUrl} key={id} title={title} imageUrl={imageUrl} size={size}/>)}
             </DirectoryMenu>
         </>
     )

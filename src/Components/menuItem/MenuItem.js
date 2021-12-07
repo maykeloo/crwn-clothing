@@ -8,10 +8,10 @@ import {
 } from "./menuItemElements.js";
 
 
-const MenuItem = ({title, imageUrl, size}) => {
+const MenuItem = ({title, imageUrl, size, to}) => {
   return (
     <>
-      <MenuItemWrapper className={`${size}`}>
+      <MenuItemWrapper className={`${size}`} to={to}>
           <BackgroundImage id='bg-image' style={{ backgroundImage: `url(${imageUrl})` }}/>
         <Content id='cont'>
           <Title>{title.toUpperCase()}</Title>

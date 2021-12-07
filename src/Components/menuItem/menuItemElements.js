@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const MenuItemWrapper = styled.div`
+export const MenuItemWrapper = styled(Link)`
+  text-decoration: none;
   min-width: 30%;
   height: 300px;
   flex: 1 1 auto;
@@ -40,7 +42,9 @@ export const Title = styled.h1`
   color: #14213d;
 `;
 
-export const Subtitle = styled.span``;
+export const Subtitle = styled.span`
+  color: blue;
+`;
 
 export const BackgroundImage = styled.div`
   height: 100%;
